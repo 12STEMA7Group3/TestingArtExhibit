@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Gallery</title>
+    <meta name="author" content="Made by Aaron Angelo Medina Ragudos">
+    <meta name="description" content="An edited and improved version of a previous work made by me in school.">
+    <link rel="stylesheet" type="text/css" href="../styles/gallery.css">
+    <script defer type="text/javascript" src="../javascript/gallery.js"></script>  
+</head>
+<body>
+    <div id="root">
+        <div class="background">
+            <div class="menu-container">
+                <div class="menu">
+                    <div class="header-show-on-mobile">
+                        <div class="logonav-section">
+                            <div class="logo-container">
+                                <img
+                                class="logo"
+                                src="../assets/images/logo/logo.png"
+                                type="image/png"
+                                alt="logo.png"
+                                >
+                            </div>
+                            <div class="text-container">
+                                <h1>Art Exhibit</h1>
+                            </div>
+                        </div>
+                        <div class="searchbar-section">
+                            <div class="searchbar-container">
+                                <div class="search-icon-container">
+                                    <img 
+                                    class="search-icon"
+                                    src="../assets/images/svg/search.svg"
+                                    type="svg/icon"
+                                    alt="Search Icon.svg"
+                                    >
+                                </div>
+                                <input type="text" placeholder="Search..." aria-placeholder="Search..." class="searchbar" id="searchBar1" name="searchbar" onkeyup="searchFunction1()" />
+                            </div>
+                        </div>
+                        <div class="burger-icon-container">
+                            <span class="burger-icon" id="burger-icon" onclick="openNav()">&#9776;</span>
+                        </div>
+                        <div class="sidenavbar" id="sideNav">
+                            <button id="closebtn" type="button" class="closebutton" onclick="closeNav()">&times;</button>
+                            <div class="sidenavbar-buttons-container">
+                                <button class="sidenavbar-buttons accordion" type="button">Lightrooms</button> 
+                                <div class="sidenav-menu-content">
+                                    <a href="#">Photographies</a>
+                                    <a href="#">Digital Artworks</a>
+                                    <a href="#">Traditional Artworks</a>
+                                </div>
+                            </div>
+                            <div class="sidenavbar-buttons-container">
+                                <button class="sidenavbar-buttons accordion" type="button">About</button> 
+                                <div class="sidenav-menu-content">
+                                    <a href="#">About This Website</a>
+                                    <a href="#">About The Developers</a>
+                                </div>
+                            </div>
+                            <div class="sidenavbar-buttons-container">
+                                <button class="sidenavbar-buttons accordion" type="button">Contact Us</button> 
+                                <div class="sidenav-menu-content">
+                                    <a href="#">Through Phone</a>
+                                    <a href="#">Through Social Media</a>
+                                    <a href="#">Through School</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-show-on-desktop">
+                        <div class="searchbar-section">
+                            <div class="searchbar-container">
+                                <div class="search-icon-container">
+                                    <img 
+                                    class="search-icon"
+                                    src="../assets/images/svg/search.svg"
+                                    type="svg/icon"
+                                    alt="Search Icon.svg"
+                                    >
+                                </div>
+                                <input type="text" placeholder="Search..." aria-placeholder="Search..." class="searchbar" id="searchBar2" name="searchbar" onkeyup="searchFunction2()" />
+                            </div>
+                        </div>
+                        <div class="logonav-section">
+                            <div class="logo-container">
+                                <img
+                                class="logo"
+                                src="../assets/images/logo/logo.png"
+                                type="image/png"
+                                alt="logo.png"
+                                >
+                            </div>
+                            <div class="text-container">
+                                <h1>Art Exhibit</h1>
+                            </div>
+                        </div>
+                        <div class="nav-menu-container">
+                            <div class="navlist-container">
+                                <ul class>
+                                    <li>
+                                        <button type="button" class="list-button">Lightroom</button>
+                                        <div class="navmenu-dropdown">
+                                            <a href="#">Photographies</a>
+                                            <a href="#">Digital Artworks</a>
+                                            <a href="#">Traditional Artworks</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="list-button">About</button>
+                                        <div class="navmenu-dropdown">
+                                            <a href="#">About The Developers</a>
+                                            <a href="#">About This Website</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="list-button">Contact Us</button>
+                                        <div class="navmenu-dropdown">
+                                            <a href="#">Through Phone</a>
+                                        <a href="#">Through Social Media</a>
+                                        <a href="#">Through School</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="width: 30px; max-width: 30px;">
+                            <a href="../index.html">
+                                <img
+                                class="homepage"
+                                src="../assets/images/logo/homepage.png"
+                                >
+                            </a>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="main-content" id="main-content">
+                <div class="title-container">
+                    <h1 class="title">Main Gallery</h1>
+                </div>
+                <div class="gridContainer">
+                    <div class="gridCentered">
+                        <div class="cardContainer">
+                            <div class="card landscape-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick('reminiscence')">
+                                        <img 
+                                        class="gallery-images"
+                                        src="../assets/images/digital-art/Reminiscence by Kayla.png"
+                                        alt="Reminiscence by Kayla.png"
+                                        type="image/png"
+                                        >
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">REMINISCENCE</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card small-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick('unforgettable')">
+                                        <img 
+                                        class="gallery-images"
+                                        src="../assets/images/traditional-art/Unforgettable_Ramos.jpg"
+                                        alt="Unforgettable by Ramos.png"
+                                        type="image/png"
+                                        >
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">UNFORGETTABLE</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card medium-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick('carousel')">
+                                        <img 
+                                        class="gallery-images"
+                                        src="../assets/images/photography/CAROUSEL_Vasquez.jpg"
+                                        alt="Carousel by Vasquez"
+                                        type="image/jpg"
+                                        >
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">CAROUSEL</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card large-card">
+                                <div class="image-container portrait">
+                                    <div class="container-of-artwork" onclick="imageClick('kalye')">
+                                        <img 
+                                        class="gallery-images"
+                                        src="../assets/images/photography/KALYE_Vasquez.jpg"
+                                        alt="Kalye by Vasquez.jpg"
+                                        type="image/jpg"
+                                        >
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">KALYE</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card landscape-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick('honorary')">
+                                        <img 
+                                        class="gallery-images"
+                                        src="../assets/images/traditional-art/Honorary_Pua.PNG"
+                                        alt="Honorary by Pua.png"
+                                        type="image/png"
+                                        >
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">HONORARY</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card small-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick('duyan')">
+                                        <img 
+                                        class="gallery-images"
+                                        src="../assets/images/photography/DUYAN_Ygar,M..jpg"
+                                        alt="Duyan by Ygar.jpg"
+                                        type="image/jpg"
+                                        >
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">DUYAN</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card medium-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick('kapre')">
+                                        <img 
+                                        class="gallery-images"
+                                        src="../assets/images/digital-art/Uson-part1childhoodfears.png"
+                                        alt="Kapre by Uson.png"
+                                        type="image/png"
+                                        >
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">KAPRE</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card large-card">
+                                <div class="image-container portrait">
+                                    <div class="container-of-artwork" onclick="imageClick('kalaro')">
+                                        <img 
+                                        class="gallery-images"
+                                        src="../assets/images/photography/KALARO_Ygar,M..jpg"
+                                        alt="Kalaro by Ygar.png"
+                                        type="image/png"
+                                        >
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">KALARO</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card landscape-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick('playground')">
+                                        <img 
+                                        class="gallery-images"
+                                        src="../assets/images/photography/PLAYGROUND_Ygar,M..jpg"
+                                        alt="Playground by Ygar.jpg"
+                                        type="image/jpg"
+                                        >
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">PLAYGROUND</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card small-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick('kalsada')">
+                                        <img 
+                                        class="gallery-images"
+                                        src="../assets/images/traditional-art/Kalsada_Ordinario.jpg"
+                                        alt="Kalsada by Ordinario.jpg"
+                                        type="image/jpg"
+                                        >
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">KALSADA</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card medium-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick('sablay')">
+                                        <img 
+                                        class="gallery-images"
+                                        src="../assets/images/digital-art/Sablay_Padit.jpg"
+                                        alt="Sablay by Padit.jpg"
+                                        type="image/jpg"
+                                        >
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">SABLAY</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card medium-card">
+                                <div class="image-container portrait">
+                                    <div class="container-of-artwork" onclick="imageClick('ngiti')">
+                                        <img 
+                                        class="gallery-images"
+                                        src="../assets/images/photography/NGITI_Salcedo.jpg"
+                                        alt="Ngiti by Salcedo.jpg"
+                                        type="image/jpg"
+                                        >
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">NGITI</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card landscape-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick('merienda')">
+                                        <img 
+                                        class="gallery-images"
+                                        src="../assets/images/traditional-art/Merienda_Villaflor.jpg"
+                                        alt="Merienda by Villaflor.jpg"
+                                        type="image/jpg"
+                                        >
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">MERIENDA</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card large-card">
+                                <div class="image-container portrait">
+                                    <div class="container-of-artwork" onclick="imageClick('ilog')">
+                                        <img 
+                                        class="gallery-images"
+                                        src="../assets/images/photography/ILOG_Salcedo.jpg"
+                                        alt="Ilog by Salcedo.jpg"
+                                        type="image/jpg"
+                                        >
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">ILOG</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card small-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick('nostalgia')">
+                                        <img 
+                                        class="gallery-images"
+                                        src="../assets/images/digital-art/Nostalgia Strike by Orcajada.png"
+                                        alt="Nostalgia Strikes by Orcajada.png"
+                                        type="image/png"
+                                        >
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">NOSTALGIA STRIKES</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card medium-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick('manananggal')">
+                                        <img 
+                                        class="gallery-images"
+                                        src="../assets/images/digital-art/Uson-part2childhoodfears.png"
+                                        alt="Manananggal by Uson.png"
+                                        type="image/png"
+                                        >
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">MANANANGGAL</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card large-card">
+                                <div class="image-container portrait">
+                                    <div class="container-of-artwork" onclick="imageClick('treats')">
+                                        <img 
+                                        class="gallery-images"
+                                        src="../assets/images/photography/blank (6)_Salcedo.jpg"
+                                        alt="Candies by Salcedo.jpg"
+                                        type="image/jpg"
+                                        >
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">LUSCIOUS TREATS</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card medium-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick('palaruan')">
+                                        <img 
+                                        class="gallery-images"
+                                        src="../assets/images/photography/blank (1)_Salcedo.jpg"
+                                        alt="Palaruan by Salcedo.jpg"
+                                        type="image/jpg"
+                                        >
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">PALARUAN</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card medium-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick('kalinga')">
+                                        <img 
+                                        class="gallery-images"
+                                        src="../assets/images/traditional-art/Kalinga.jpg"
+                                        alt="Kalinga by Ramirez.jpg"
+                                        type="image/jpg"
+                                        >
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">KALINGA</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card large-card">
+                                <div class="image-container portrait">
+                                    <div class="container-of-artwork" onclick="imageClick('anamnesis')">
+                                        <img 
+                                        class="gallery-images"
+                                        src="../assets/images/traditional-art/Anamnesis_Pehipol.jpg"
+                                        alt="Anamnesis by Pehipol.jpg"
+                                        type="image/jpg"
+                                        >
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">ANAMNESIS</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card medium-card">
+                                <div class="image-container portrait">
+                                    <div class="container-of-artwork" onclick="imageClick('piko')">
+                                        <img 
+                                        class="gallery-images"
+                                        src="../assets/images/photography/PIKO_Vasquez.jpg"
+                                        alt="Piko by Vasquez.jpg"
+                                        type="image/jpg"
+                                        >
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">PIKO</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <script type="text/javascript">
+        const threeDotsContainer = document.getElementsByClassName('menu-three-dots-container');
+        const menuDotsInjector = () => {
+            let i;
+            for ( i = 0; i < threeDotsContainer.length; i++) {
+                threeDotsContainer[i].innerHTML = '<img src="../assets/images/svg/three-dots-svgrepo-com.svg" class="three-dots" type="icon/svg" alt="three-dots">';
+            }
+        }
+        menuDotsInjector();
+    </script>
+
+    <!--MODAL SECTION-->
+    <div class="modal-section">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-closebutton">&times;</span>
+            </div>
+            <div class="modal-main-content">
+                <div class="modal-image-container" id="modalImageContainer">
+                </div>
+                <h1 id="modalImageName"></h1>
+                <div class="modal-description-container">
+                    <p class="modal-description" id="modalDescription"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
